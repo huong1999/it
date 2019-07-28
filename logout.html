@@ -1,0 +1,351 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyPets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style-main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+            .affix ~ .container-fluid {
+                position: relative;
+                top: 50px;
+            }
+
+        #section1 {
+            padding-top: 1000px;
+            height: 500px;
+            color: #fff;
+            background-color: transparent;
+        }
+
+        #section2 {
+            padding-top: 1000px;
+            height: 500px;
+            color: #fff;
+            background-color: #2d2d30;
+        }
+
+        #section3 {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #ff9800;
+        }
+
+        #section41 {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #00bcd4;
+        }
+
+        #section42 {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #009688;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: currentColor">
+    <!--Menu-->
+    <div class="container-fluid" style="color:#fff;height:90px;">
+        <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="197">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <!--Logo-->
+                    <img src="img/LovePets.png" class="nav navbar-nav navbar-left">
+
+                    <h4 class="nav navbar-nav navbar-left" style="margin-top: 30px; margin-left: 10px">MyPets</h4>
+                    <!--Thanh search-->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="col-xs-8" style="margin-top: 20px">
+                            <input id="search-input" class="form-control" list="news" name="news" type="text">
+
+                            <datalist id="news">
+                                <option value="Thông tin cơ bản về mèo Laperm" id="search-input">
+                                <option value="Biện pháp khống chế hành vi hung hãn của chó" id="search-input">
+                                <option value="Nhận biết và cách xử lí khi mèo bị nhiễm trùng hệ tiêu hóa" id="search-input">
+                                <option value="Cách nhận biết mèo bị bệnh dại và những điều bạn cần làm" id="search-input">
+                                <option value="Những thứ cần chuẩn bị trước khi nuôi một bé mèo" id="search-input">
+                                <option value="Sự thật về giống chó BullDog Mỹ" id="search-input">
+                                <option value="Tìm hiểu về tiêu chuẩn cân nặng của giống chó Samoyed" id="search-input">
+                                <option value="Hội chứng Cushing ở chó và những điều cần biết" id="search-input">
+                                <option value="Đôi nét về giống chó Akita Inu thuần chủng" id="search-input">
+                                <option value="Thực đơn giúp mèo nhà bạn tăng cân" id="search-input">
+                                <option value="Nên cho mèo ăn mấy lần 1 ngày" id="search-input">
+                                <option value="Bạn nên làm gì khi mèo lười ăn" id="search-input">
+                            </datalist>
+                        </li>
+                        <li class="input-group-btn">
+                            <button id="search" type="button" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="logout.html" style="width: 150px; text-align: center"><h4>Trang chủ</h4></a></li>
+                        <li class="dropdown" style=" width: 150px">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-align: center"><h4>Chó<span class="caret"></h4></span></a>
+                            <ul class="dropdown-menu" style="background-color: antiquewhite">
+                                <li><a href="Dog/Dogs1.html">Chăm sóc chó</a></li>
+                                <li><a href="Dog/Dogs2.html">Thức ăn cho chó</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" style=" width: 150px">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-align: center"><h4>Mèo<span class="caret"></h4></span></a>
+                            <ul class="dropdown-menu" style="background-color: antiquewhite">
+                                <li><a href="Cat/Cat1.html">Chăm sóc mèo</a></li>
+                                <li><a href="Cat/Cat2.html">Thức ăn cho mèo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login-register/login-register.html" style="width: 150px;text-align: center"><h4>Log Out</h4></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Slide-->
+    <div class="container slide-top">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/bigcat.jpg" alt="cat" style="width:100%;height: 100%">
+                </div>
+
+                <div class="item">
+                    <img src="img/bigdog.jpg" alt="dog" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="img/bigdog2.jpg" alt="new cat" style="width:100%;height: 100%">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!--Tin tức-->
+
+    <div id="portfolio" class="container-fluid text-center bg-grey" style="margin-top: 300px;background-color: #F8E3FB ">
+
+        <h2 class="title-name"><img src="img/foot.png" width="30" height="30" style="margin-right: 10px">Tin tức<img src="img/foot.png" width="30" height="30" style="margin-left: 10px"></h2><br><br><br>
+
+        <div class="row text-center slideanim">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
+                    <a href="./content/c1.html">Thông tin cơ bản về mèo Laperm</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/dog2.jpg" class="img-rounded" alt="Cinque Terre" width="470" height="300">
+                    <a href="#">Biện pháp khống chế hành vi hung hãn của chó</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat1.gif" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Nhận biết và cách xử lí khi mèo bị nhiễm trùng hệ tiêu hóa</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat3.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
+                    <a href="#">Cách nhận biết mèo bị bệnh dại và những điều bạn cần làm</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat2.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
+                    <a href="#">Những thứ cần chuẩn bị trước khi nuôi một bé mèo</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/dog3.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Sự thật về giống chó BullDog Mỹ</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/dog5.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Tìm hiểu về tiêu chuẩn cân nặng của giống chó Samoyed</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/dog4.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Hội chứng Cushing ở chó và những điều cần biết</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/dog6.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Đôi nét về giống chó Akita Inu thuần chủng</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat6.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Thực đơn giúp mèo nhà bạn tăng cân</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat7.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+                    <a href="#">Nên cho mèo ăn mấy lần 1 ngày</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/cat5.jpg" class="img-rounded" alt="Cinque Terre" width="420" height="300">
+                    <a href="#">Bạn nên làm gì khi mèo lười ăn</a>
+                </div>
+            </div>
+        </div>
+        <!--On top-->
+        
+        <div class="video" style=" background-color: #F8E3FB">
+            <hr width="30%" align="center" />
+            <h2 class="title-name"><img src="img/foot.png" width="30" height="30" style="margin-right: 10px">Video Hài hước<img src="img/foot.png" width="30" height="30" style="margin-left: 10px"></h2><br><br><br>
+            <div class="row text-center slideanim">
+
+                <div class="col-sm-4" style="margin-bottom: 70px">
+
+                    <iframe class="youtube-link" src="https://www.youtube.com/embed/VpKlVwuRCN8?feature=oembed" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+                <div class="col-sm-4" style="margin-bottom: 70px">
+
+                    <iframe class="youtube-link" src="https://www.youtube.com/embed/videoseries?list=PLIqQljekkQYDkfyWbbRCZQD7M-0HxmZN8" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="col-sm-4" style="margin-bottom: 70px">
+
+                    <iframe class="youtube-link" src="https://www.youtube.com/embed/drSk-8fwYAA?feature=oembed" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="col-sm-4" style="margin-bottom: 70px">
+
+                    <iframe class="youtube-link" src="https://www.youtube.com/embed/eNJPDuDnREo?feature=oembed" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="col-sm-4" style="margin-bottom: 70px">
+
+                    <iframe class="youtube-link" src="https://www.youtube.com/embed/VpKlVwuRCN8?feature=oembed" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button>
+        <script>
+        $(document).ready(function () {
+            $("#search").on("click", function (e) {
+                jQuery.ajax({
+                    //url của file
+                    url: "http://192.168.43.156:8000/posts/search",
+                    // loại request
+                    type: "POST",
+                    // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                    async: false,
+                    //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
+                    //contentType: "application/x-www-form-urlencoded",
+                    //dữ liệu được gửi đến server
+                    data: {
+                        "keyword": jQuery("#search-input").val()
+                    },
+                    
+                })
+                    .done(function (response, textStatus, jqXHR) {
+
+                        
+                            window.location.href = "content/c1.html";
+                        
+                        })
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+                        console.log(errorThrown);
+                        alert("HTTP Request Failed");
+                    })
+                    .always(function () {
+                        e.preventDefault();
+                    });
+            });
+        });
+        //$("#title").
+     // When the user scrolls down 20px from the top of the document, show the button
+     window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- Footer -->
+        <footer class="text-center">
+            <h4>UETCodeCamp</h4>
+            <p>Copyright &copy; 2019 &middot; All Rights Reserved &middot; <a href="https://www.facebook.com/petsne/?__tn__=%2Cd%2CP-R&eid=ARCtNhwcem23O2cI7Z2YEfUwNuEmDUlIhBpuCm_1MBGx-Ew2x4DMxSUIWbZYW3q7MQw4faxkJ6dNylkr">MyPets</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyPets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style-main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+            .affix ~ .container-fluid {
+                position: relative;
+                top: 50px;
+            }
+
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color:aliceblue">
+    <!--Menu-->
+    <div class="container-fluid" style="color:#fff;height:90px;">
+        <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="197">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <!--Logo-->
+                    <img src="../img/LovePets.png" class="nav navbar-nav navbar-left">
+
+                    <h4 class="nav navbar-nav navbar-left" style="margin-top: 30px; margin-left: 10px">MyPets</h4>
+                    <!--Thanh search-->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="col-xs-8" style="margin-top: 20px">
+                            <input id="search-input" class="form-control" list="news" name="news" type="text">
+
+                            <datalist id="news">
+                                <option value="Thông tin cơ bản về mèo Laperm" id="search-input">
+                                <option value="Biện pháp khống chế hành vi hung hãn của chó" id="search-input">
+                                <option value="Nhận biết và cách xử lí khi mèo bị nhiễm trùng hệ tiêu hóa" id="search-input">
+                                <option value="Cách nhận biết mèo bị bệnh dại và những điều bạn cần làm" id="search-input">
+                                <option value="Những thứ cần chuẩn bị trước khi nuôi một bé mèo" id="search-input">
+                                <option value="Sự thật về giống chó BullDog Mỹ" id="search-input">
+                                <option value="Tìm hiểu về tiêu chuẩn cân nặng của giống chó Samoyed" id="search-input">
+                                <option value="Hội chứng Cushing ở chó và những điều cần biết" id="search-input">
+                                <option value="Đôi nét về giống chó Akita Inu thuần chủng" id="search-input">
+                                <option value="Thực đơn giúp mèo nhà bạn tăng cân" id="search-input">
+                                <option value="Nên cho mèo ăn mấy lần 1 ngày" id="search-input">
+                                <option value="Bạn nên làm gì khi mèo lười ăn" id="search-input">
+                            </datalist>
+                        </li>
+                        <li class="input-group-btn">
+                            <button id="search" type="button" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                            <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../logout.html" style="width: 150px; text-align: center"><h4>Trang chủ</h4></a></li>
+                        <li class="dropdown" style=" width: 150px">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-align: center"><h4>Chó<span class="caret"></h4></span></a>
+                            <ul class="dropdown-menu" style="background-color: antiquewhite">
+                                <li><a href="../Dog/Dogs1.html">Chăm sóc chó</a></li>
+                                <li><a href="../Dog/Dogs2.html">Thức ăn cho chó</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" style=" width: 150px">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-align: center"><h4>Mèo<span class="caret"></h4></span></a>
+                            <ul class="dropdown-menu" style="background-color: antiquewhite">
+                                <li><a href="../Cat/Cat1.html">Chăm sóc mèo</a></li>
+                                <li><a href="../Cat/Cat2.html">Thức ăn cho mèo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../login-register/login-register.html" style="width: 150px;text-align: center"><h4>Log in</h4></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+ 
+
+   <!--Content-->
+    <div class="container content1">
+        <div class="title-content" id="title">
+            <br />
+            <h1 style="background-color:antiquewhite; width:1140px;height:100px">Thông tin cơ bản về mèo Laperm</h1>
+            <br />
+            <div class="content-cat1">
+                <img src="../login-register/backend/image/meo1.jpg" />
+                <p>Mèo Laperm là giống mèo lông xoăn được tìm thấy ở trang trại nhỏ ở Dalles, Oregon. Vào năm 1982, giống mèo này được sinh ra mang hình hài khác với các con mèo khác. Chúng sở hữu bộ lông xoăn trông rất đáng yêu. Sau đây, Petlife sẽ giới thiệu đến các bạn những thông tin thú vị về loài mèo Laperm này nhé.</p>
+                <h3>Nguồn gốc của loài mèo Laperm</h3>
+                
+                <p>
+                    Đây là giống mèo có nguồn gốc từ Hoa Kỳ năm 1982. Khi mới sinh ra, Laperm hầu như không có lông, nhưng đến độ tuổi trưởng thành, lông của chúng xoăn tít và xù lên. Khi nhỏ lông của Laperm rụng nhiều, sau nhiều lần như vậy bộ lông trở nên xù xì và tình trạng rụng lông của ít hơn hẳn.
+                    Năm 1995, chúng được Hiệp hội mèo quốc tế công nhận, mãi đến năm 2008 Laperm mới được đưa vào Hiệp hội những người yêu mèo trên thế giới.
+                </p>
+                
+                <h3>Ngoại hình loài mèo</h3>
+                <p>
+                    Laperm là loài mèo có bộ lông thú vị và độc đáo. Những lọn lông của chúng ngắn, dài khác nhau từ sóng mềm nhẹ nhàng đến vòng kín tua tủa. Đối với lông dài, sẽ là một chiếc đuôi phồng và xoăn gợn sóng. Còn đối với mèo lông ngắn, chiếc đuôi sẽ không phồng nhưng vẫn giữ được độ xoăn.
+                    Lông của chúng không gọn gàng và ngay ngắn, mà trông rất xù xì và lộn xộn. Loài mèo này có bộ râu trắng, xoăn tít rất ngộ nghĩnh. Chiếc đầu của Laperm dạng nêm, đôi mắt hình hạnh nhân và đôi tai to vểnh lên trên.
+                </p>
+                <h3>Tính cách của mèo Laperm</h3>
+                
+                <p>
+                    Những con mèo Laperm có tính cách nhẹ nhàng và dễ thương. Chúng còn rất thông minh và tháo vát. Laperm luôn để ý và sắp xếp thời gian mỗi ngày để có thể vui chơi một cách khoa học nhất.
+                    Loài mèo Laperm rất thông minh và trung thành, luôn lấy được thiện cảm của người xung quanh, kể cả vật nuôi khác. Tuy chúng cũng rất gần gũi với trẻ em, nhưng chủ nuôi không nên để chúng ở gần mèo Laperm. Vì Laperm tinh nghịch, có thể gây thương tích khi chơi đùa với trẻ nhỏ.
+                    Laperm còn sở hữu khả năng săn mồi đỉnh cao, có thể tiêu diệt đối phương ngay lập tức. Chúng có thể chuyển đổi từ thái độ nhiệt tình, trìu mến sang thợ săn hung tợn.
+                </p>
+                <br />
+                <h3>Chăm sóc mèo Laperm</h3>
+                <p>
+                    Đây là giống mèo rất dễ nuôi nấng và chăm sóc. Chúng có sức khỏe tốt, nên chủ nuôi không cần lo lắng nhiều. Tuy bộ lông xoăn xù xì của chúng khiến mọi người hơi ngần ngại, nhưng thực tế lông của Laperm rất ít khi rụng. Bạn chỉ cần chải chuốt và tắm gội thường xuyên, sẽ giúp bộ lông luôn mượt mà.
+                    Ngoài ra, chủ nuôi nên đưa chúng đi spa mỗi tháng/ lần để chăm sóc lông luôn đẹp. Lưu ý, Laperm có thể mắc bệnh về tai hoặc mắt, nên chủ nuôi cần lưu ý vấn đề này.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button>
+        <script>
+            $("#search").on("click", function (e) {
+                jQuery.ajax({
+                    //url của file
+                    url: "http://192.168.43.156:8000/posts/search",
+                    // loại request
+                    type: "POST",
+                    // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                    async: false,
+                    //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
+                    //contentType: "application/x-www-form-urlencoded",
+                    //dữ liệu được gửi đến server
+                    data: {
+                        "keyword": jQuery("#search-input").val()
+                    },
+
+                })
+                    .done(function (response, textStatus, jqXHR) {
+
+
+                        window.location.href = "../content/c1.html";
+
+                    })
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+                        console.log(errorThrown);
+                        alert("HTTP Request Failed");
+                    })
+                    .always(function () {
+                        e.preventDefault();
+                    });
+            });
+
+     // When the user scrolls down 20px from the top of the document, show the button
+     window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- Footer -->
+        <footer class="text-center">
+            <h4>UETCodeCamp</h4>
+            <p>Copyright &copy; 2019 &middot; All Rights Reserved &middot; <a href="https://www.facebook.com/petsne/?__tn__=%2Cd%2CP-R&eid=ARCtNhwcem23O2cI7Z2YEfUwNuEmDUlIhBpuCm_1MBGx-Ew2x4DMxSUIWbZYW3q7MQw4faxkJ6dNylkr">MyPets</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>
