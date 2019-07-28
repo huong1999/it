@@ -69,13 +69,12 @@
                             </datalist>
                         </li>
                         <li class="input-group-btn">
-                                <li class="input-group-btn">
-                                        <button id="search" type="button" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
-                                            <span class="glyphicon glyphicon-search"></span> Search
-                                        </button>
-                                    </li>
+                            <button id="search" type="button" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                            <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
                         </li>
-                       
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="../logout.html" style="width: 150px; text-align: center"><h4>Trang chủ</h4></a></li>
@@ -93,7 +92,7 @@
                                 <li><a href="../Cat/Cat2.html">Thức ăn cho mèo</a></li>
                             </ul>
                         </li>
-                        <li><a href="../profile.html" style="width: 150px;text-align: center"><h4>Profile</h4></a></li>
+                        <li><a href="../profile.html" style="text-align: center"><h4>Profile</h4></a></li>
                         </ul>
                 </div>
             </div>
@@ -104,24 +103,25 @@
 
    <!--Content-->
     <div class="container content1">
-        
-    <div id="result">
-
+            <div class="row text-center slideanim"  id="result">
+   
     </div>
+    
     </div>
 
 
 
 
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button>
+  
 <script>
-  var   query=decodeURI(location.hash);
+  var   query=location.hash; //lấy địa chỉ id
   query=query.substring(1, query.length);
   jQuery.ajax({
                     //url của file
-                    url: "http://192.168.43.156:8000/posts/search",
+                    url: "http://192.168.43.156:8000/posts/"+query,
                     // loại request
-                    type: "POST",
+                    type: "GET",
                     // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
                     async: false,
                     //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
@@ -135,12 +135,12 @@
                     .done(function (response, textStatus, jqXHR) {
 console.log(response);
                         if(response.success){
-                            document.querySelector("#result").innerHTML="<h1 style='margin-left:400px'>Có " + response.data.data.length + " kết quả tìm kiếm</h1>";
-                            response.data.data.forEach(e=>{
-                                document.querySelector("#result").innerHTML+=`
-                                 <a href=c2.html#`+e._id+`><img class="img-search" src=http://127.0.0.1:8887/a/`+e.image+`/>
-                                `+`<p class="title-search">`+e.title+`</p></a>`;
-                            })
+                            e=response.data;
+                                document.querySelector("#result").innerHTML+=
+                                `<h1 class="title-content-search">`+e.title+`</h1>`+
+                                `<div class="col-sm-4">
+                <div class="thumbnail"><img class="image" src=http://127.0.0.1:8887/a/`+e.image+` /></div></div>
+                                `+`<div class="content-search"><p class="text-content">`+e.content+`</p></div><hr><span>Bài viết đã có `+e.like+` lượt like</span><button class="glyphicon glyphicon-thumbs-up" id="like" style="margin-left:10px"></button>`;
                         }
                         
                         })
@@ -151,25 +151,48 @@ console.log(response);
                     .always(function () {
                         e.preventDefault();
                     });
-              
+            
+            
+            
 </script>
 
 
+    <script>
+            $("#like").on("click", function (e) {
+            jQuery.ajax({
+                //url của file
+                url: "http://192.168.43.156:8000/posts/:id/like",
+                // loại request
+                type: "GET",
+                // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                async: false,
+                //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
+                //contentType: "application/x-www-form-urlencoded",
+                //dữ liệu được gửi đến server
+                data: {
+                    
+                },
+            })
 
-
-
-
-
-
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button>
-        <script>
-            $(document).ready(function () {
+                .done(function (walker, textStatus, jqXHR) {
+                    
+                    if(response.success){
+                            e=response.data;
+                                alert("Cảm ơn bạn đã like trang!");
+                        }
+                })
+                .fail(function (jqXHR, textStatus, errorThrown) {
+                    console.log("HTTP Request Failed");
+                    alert("HTTP Request Failed");
+                })
+                .always(function () {
+                    
+                });
+        });
             $("#search").on("click", function (e) {
               location.href="../content/c1.html#"+jQuery("#search-input").val();
             });
-            
-        });
-
+        
      // When the user scrolls down 20px from the top of the document, show the button
      window.onscroll = function() {scrollFunction()};
      function scrollFunction() {
@@ -184,7 +207,7 @@ console.log(response);
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
-        </script>
+    </script>
         <!-- Footer -->
         <footer class="text-center">
             <h4>UETCodeCamp</h4>

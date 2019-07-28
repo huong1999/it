@@ -76,124 +76,59 @@
                     <li><a href="./Cat2.html">Thức ăn cho mèo</a></li>
                 </ul>
             </li>
-            <li><a href="../login-register/login-register.html" style="width: 150px;text-align: center"><h4>Log in</h4></li>
-        </ul>
+            <li><a href="../profile.html" style="width: 150px;text-align: center"><h4>Profile</h4></li>
+            </ul>
       </div>
     </div>
   </div>
 </nav>    
 </div>
-	<div id="portfolio" class="container-fluid text-center bg-grey" style="margin-top: 30px ">
+<div id="portfolio" class="container-fluid text-center bg-grey" style="margin-top: 30px">
+
+    <div class="row text-center slideanim" id="content-home-cat">
+      </div>
   
-	<div class="row text-center slideanim">
-    	<div class="col-sm-4">
-      		<div class="thumbnail">
-        	<img src="../img/cat.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="400">
-        	<a href="#" >Thông tin cơ bản về mèo Laperm</a>
-      		</div>
-    	</div>
-    <div class="col-sm-4">
-      	<div class="thumbnail">
-        	<img src="../img/cat1.gif" class="img-rounded" alt="Cinque Terre" width="400" height="400">
-        	<a href="#" >Nhận biết và cách xử lí khi mèo bị nhiễm trùng hệ tiêu hóa</a>
-      	</div>
-    </div>
-	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat3.jpg" class="img-rounded" alt="Cinque Terre" width="394" height="400">
-        	<a href="#" >Cách nhận biết mèo bị bệnh dại và những điều bạn cần làm</a>
-      </div>
-    </div>
-	  <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat8.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="400">
-        <a href="#" >Cách làm sạch răng cho mèo</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat2.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="400">
-        <a href="#" >Những thứ cần chuẩn bị trước khi nuôi một bé mèo</a>
-      </div>
-    </div>
-  	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat11.jpg" class="img-rounded" alt="Cinque Terre" width="405" height="400">
-        <a href="#" >Mèo bị đau mắt thì phải làm sao? Cách điều trị bệnh cho mèo</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat9.png" class="img-rounded" alt="Cinque Terre" width="520" height="400">
-        <a href="#">Hướng dẫn chơi đùa cùng mèo đúng cách</a>
-      </div>
-    </div>
-	  <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat10.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Những dấu hiệu mèo nhà bạn đang ốm</a>
-      </div>
-    </div>
-	  <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat12.jpg" class="img-rounded" alt="Cinque Terre" width="367" height="300">
-        <a href="#" >Phải làm gì khi mèo yêu bị rụng lông</a>
-      </div>
-    </div>
-	 <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat6.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Thực đơn giúp mèo nhà bạn tăng cân</a>
-      </div>
-    </div>
-	 <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/cat7.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Nên cho mèo ăn mấy lần 1 ngày</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-	 <div class="thumbnail">
-        <img src="../img/cat5.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Bạn nên làm gì khi mèo lười ăn</a>
-      </div>
-    </div>
+    
   </div>
-  <div class="row">
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button> 
 <script>
-    $(document).ready(function () {
-        $("#search").on("click", function (e) {
-            jQuery.ajax({
-                //url của file
-                url: "http://192.168.43.156:8000/posts/search",
-                // loại request
-                type: "POST",
-                // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
-                async: false,
-                //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
-                //contentType: "application/x-www-form-urlencoded",
-                //dữ liệu được gửi đến server
-                data: {
-                    "keyword": jQuery("#search-input").val()
-                },
+    
+   
+   jQuery.ajax({
+                 //url của file
+                 url: "http://192.168.43.156:8000/posts/search/cats",
+                 // loại request
+                 type: "GET",
+                 // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                 async: false,
+                 //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
+                 //contentType: "application/x-www-form-urlencoded",
+                 //dữ liệu được gửi đến server
+                 data: {
+                 }
+                 
+             })
+                 .done(function (response, textStatus, jqXHR) {
+                       console.log(response);
+                     if(response.success){
+                       console.log("News: ", response);
+                         response.data.data.forEach(e=>{
+                             console.log(e);
+                             document.querySelector("#content-home-cat").innerHTML+=`
+                             <div class="col-sm-4"><a href=../content/c2.html#`+e._id+`><img class="img-content" src=http://127.0.0.1:8887/a/`+e.image+` />
+                             `+`<p class="title-content">`+e.title+`</p></a></div>`;
+                         })
+                     }
+                     console.log(document.querySelector("#content-home-cat").innerHTML);
+                     })
+                 .fail(function (jqXHR, textStatus, errorThrown) {
+                     console.log(errorThrown);
+                     alert("HTTP Request Failed");
+                 })
+                 .always(function () {
+                     e.preventDefault();
+                 });
 
-            })
-                .done(function (response, textStatus, jqXHR) {
-
-
-                    window.location.href = "content/c1.html";
-
-                })
-                .fail(function (jqXHR, textStatus, errorThrown) {
-                    console.log(errorThrown);
-                    alert("HTTP Request Failed");
-                })
-                .always(function () {
-                    e.preventDefault();
-                });
-        });
-    });
 
      // When the user scrolls down 20px from the top of the document, show the button
      window.onscroll = function() {scrollFunction()};

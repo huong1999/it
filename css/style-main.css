@@ -56,9 +56,9 @@
 	margin-top: 40px;
 }
 .slide-top {
-	margin-top: 50px;
-	height: 700px;
-	width: 1450px;
+
+	height: 550px;
+	width: 1330px;
 }
 .form-control {
 	width: 250px;
@@ -97,3 +97,51 @@ datalist {
     color: #777;
     text-decoration: none;
   }  
+.image{
+  margin-left: 380px;
+  margin-top: 30px;
+  width: 400px;
+}
+.content-search{
+  margin: 30px 100px 30px 100px;
+}
+.title-content{
+  text-align: center;
+  padding-left: 330px;
+ 
+  padding-right: 330px;
+}
+.text-content{
+  font-size: 20px;
+  margin-top: 50px;
+}
+.img-content{
+  margin: 10px 20px 30px 50px;
+  width:400px;
+  height: 300px;
+}
+.img-search{
+  width: 500px;
+  margin: 20px 30px 20px 330px;
+}
+.title-search {
+  padding-left: 330px;
+  text-align: center;
+  padding-right: 330px;
+  font-size: 20px;
+  
+}
+.title-content{
+  padding-left: 30px;
+  text-align: center;
+  padding-right: 30px;
+  font-size: 15px;
+  
+}
+.title-content-search{
+  padding-left: 30px;
+  text-align: center;
+  padding-right: 30px;
+  font-size: 30px;
+  
+}

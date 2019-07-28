@@ -49,16 +49,32 @@
 		  <img src="../img/LovePets.png" class="nav navbar-nav navbar-left">
 		  <h4 class="nav navbar-nav navbar-left" style="margin-top: 30px; margin-left: 10px">MyPets</h4>
 		  <!--Thanh search-->
-		<ul class="nav navbar-nav navbar-left" >
-		<li class="col-xs-8" style="margin-top: 25px">
-    		<input class="form-control" id="ex3" type="text">
-  		</li>
-      	<li class="input-group-btn">
-        	<button type="button" class="btn btn-info" style="margin-top: 25px">
-				<span class="glyphicon glyphicon-search"></span> Search
-    		</button>
-	  	</li>
-		</ul>
+      <ul class="nav navbar-nav navbar-left">
+          <li class="col-xs-8" style="margin-top: 20px">
+              <input id="search-input" class="form-control" list="news" name="news" type="text">
+
+              <datalist id="news">
+                  <option value="Dấu hiệu nhận biết chó bị ngộ độc" id="search-input">
+                  <option value="Khám phá văn hóa nuôi động vật ở nhật bản" id="search-input">
+                  <option value="Bạn có biết nuôi thú cưng giúp gia tăng hạnh phúc?" id="search-input">
+                  <option value="Hướng dẫn cách làm ổ cho mèo" id="search-input">
+                  <option value="Những loại thực phẩm giúp chó mẹ nhiều sữa" id="search-input">
+                  <option value="5 mẹo huấn luyện đi vệ sinh cho chó" id="search-input">
+                  <option value="Cách điều trị nhanh nhất cho thú cưng khi bị gãy chân" id="search-input">
+                  <option value="Những loại thức ăn tươi nên cho chó ăn" id="search-input">
+                  <option value="Nguyên nhân và cách chữa bệnh tiêu chảy ở mèo con" id="search-input">
+                  <option value="Tuyệt chiêu giúp bộ lông mèo nhà bạn mượt và đẹp lộng lẫy" id="search-input">
+                  <option value="Tuyệt chiêu chữa bệnh nấm thường gặp ở mèo" id="search-input">
+                  <option value="Top những chú mèo nổi tiếng trên mạng xã hội
+                  " id="search-input">
+              </datalist>
+          </li>
+          <li class="input-group-btn">
+              <button id="search" type="button" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
+                  <span class="glyphicon glyphicon-search"></span> Search
+              </button>
+          </li>
+      </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="../logout.html" style="width: 150px"><h4>Trang chủ</h4></a></li>
 
@@ -76,8 +92,8 @@
                     <li><a href="../Cat/Cat2.html">Thức ăn cho mèo</a></li>
                 </ul>
             </li>
-            <li><a href="../login-register/login-register.html" style="width: 150px;text-align: center"><h4>Log in</h4></li>
-        </ul>
+            <li><a href="../profile.html" style="width: 150px;text-align: center"><h4>Profile</h4></a></li>
+            </ul>
           
       </div>
     </div>
@@ -88,78 +104,7 @@
 
 <div id="portfolio" class="container-fluid text-center bg-grey" style="margin-top: 30px">
 
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog.jpg" class="img-rounded" alt="Cinque Terre" width="370" height="300">
-        <a href="#" >Chó Great Pyrenees có đặc điểm tính cách gì đặc biệt</a>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog2.jpg" class="img-rounded" alt="Cinque Terre" width="435" height="300">
-        <a href="#" >Biện pháp khống chế hành vi hung hãn của chó</a>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog1.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
-        <a href="#" >Stress ở chó,nguyên nhân và cách khắc phục</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog10.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
-        <a href="#" >Nên cho chó bị viêm khớp ăn gì</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog3.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#">Sự thật về giống chó BullDog Mỹ</a>
-      </div>
-    </div>
-	  <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog5.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Tìm hiểu về tiêu chuẩn cân nặng của giống chó Samoyed</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog4.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Hội chứng Cushing ở chó và những điều cần biết</a>
-      </div>
-    </div>
-	  <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog6.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Đôi nét về giống chó Akita Inu thuần chủng</a>
-      </div>
-    </div>
-	  <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog12.jpeg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Những giống chó nghiệp vụ giỏi nhất</a>
-      </div>
-    </div>
-	 <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog9.png" class="img-rounded" alt="Cinque Terre" width="400" height="300">
-        <a href="#" >Cách khắc phục chứng hôi miệng ở chó</a>
-      </div>
-    </div>
-	 <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="../img/dog8.jpg" class="img-rounded" alt="Cinque Terre" width="437" height="300">
-        <a href="#" >Mụn cóc ở chó và những điều cần biết</a>
-      </div>
-    </div>
-	<div class="col-sm-4">
-	 <div class="thumbnail">
-        <img src="../img/dog11.jpg" class="img-rounded" alt="Cinque Terre" width="414" height="300">
-        <a href="#" >Cẩm nang chăm sóc chó BullDog Anh từ A đến Z</a>
-      </div>
+  <div class="row text-center slideanim" id="content-home-dog">
     </div>
 
 	
@@ -196,40 +141,51 @@
 	-->
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button> 
 <script>
-    $(document).ready(function () {
-        $("#search").on("click", function (e) {
+   
             jQuery.ajax({
-                //url của file
-                url: "http://192.168.43.156:8000/posts/search",
-                // loại request
-                type: "POST",
-                // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
-                async: false,
-                //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
-                //contentType: "application/x-www-form-urlencoded",
-                //dữ liệu được gửi đến server
-                data: {
-                    "keyword": jQuery("#search-input").val()
-                },
-
-            })
-                .done(function (response, textStatus, jqXHR) {
-
-
-                    window.location.href = "content/c1.html";
-
-                })
-                .fail(function (jqXHR, textStatus, errorThrown) {
-                    console.log(errorThrown);
-                    alert("HTTP Request Failed");
-                })
-                .always(function () {
-                    e.preventDefault();
-                });
-        });
-    });
-
+                          //url của file
+                          url: "http://192.168.43.156:8000/posts/search/dogs",
+                          // loại request
+                          type: "GET",
+                          // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                          async: false,
+                          //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
+                          //contentType: "application/x-www-form-urlencoded",
+                          //dữ liệu được gửi đến server
+                          data: {
+                          }
+                          
+                      })
+                          .done(function (response, textStatus, jqXHR) {
+                                console.log(response);
+                              if(response.success){
+                                console.log("News: ", response);
+                                  response.data.data.forEach(e=>{
+                                      console.log(e);
+                                      document.querySelector("#content-home-dog").innerHTML+=`
+                                      <div class="col-sm-4"><a href=../content/c2.html#`+e._id+`><img class="img-content" src=http://127.0.0.1:8887/a/`+e.image+` />
+                                      `+`<p class="title-content">`+e.title+`</p></a></div>`;
+                                  })
+                              }
+                              console.log(document.querySelector("#content-home-dog").innerHTML);
+                              })
+                          .fail(function (jqXHR, textStatus, errorThrown) {
+                              console.log(errorThrown);
+                              alert("HTTP Request Failed");
+                          })
+                          .always(function () {
+                              e.preventDefault();
+                          });
+ 
+    </script>
      // When the user scrolls down 20px from the top of the document, show the button
+     <script>
+        $(document).ready(function () {
+            $("#search").on("click", function (e) {
+              location.href="../content/c1.html#"+jQuery("#search-input").val();
+            });
+            
+        });
      window.onscroll = function() {scrollFunction()};
      function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

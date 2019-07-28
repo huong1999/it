@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="./css/style-profile.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="to">
+            <div class="form" style="background-color:moccasin">
+                <h2>Profile</h2>
+                <img class="fab fa-app-store-ios" src="img/pr.png" style="width:120px;height:120px;margin-bottom:20px"/> 
+                <label style="margin-left: 16px;">Username</label>
+                <div class="profile-text" type="text" id="name" name="name"></div>
+                <label style="margin-left: 10px;">Email</label>
+                <div class="profile-text" type="text" id="email" name="email"></div>
+                
+                <button style="margin-top: 20px"><a href="login-register/login-register.html" style="width: 150px;text-align: center"><h4>Log Out</h4></button>
+            </div>
+            <script>
+                $(document).ready(function () {
+                jQuery.ajax({
+                    //url của file
+                  url: "http://192.168.43.156:8000/user/profile",
+                    // loại request
+                    type: "GET",
+                    // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                    async: false,
+                    
+                    headers: {
+                     'token': localStorage.token
+                      },
+
+                })
+                    .done(function (response, textStatus, jqXHR) {
+
+                        if(response.success){
+                            e=response.data;
+                            console.log(e);
+                            document.querySelector("#email").innerText=e.usernow.email;
+                            document.querySelector("#name").innerText=e.usernow.username;
+                            document.querySelector("#date").innerText=e.usernow.created;
+
+                        }
+
+                    })
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR,errorThrown);
+                        alert("Can't connect");
+                    })
+                    .always(function () {
+                        e.preventDefault();
+                    });
+       
+        });
+            </script>                
+        </div>
+    </body>
+</html>

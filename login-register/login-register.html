@@ -134,7 +134,7 @@
                         })
                         
                             .done(function (response, textStatus, jqXHR) {
-                                
+                               localStorage.token=response.data.token;
                                 if (response.success) {
                                     alert("Login successed!");
                                 window.location.href = "../logout.html";
@@ -153,46 +153,6 @@
                             e.preventDefault();
                         });
                     });
-        /*
-                    $("#login-button").on("click",function(e){
-                        jQuery.ajax({
-                            //url của file
-                            url: "192.168.43.156:3000/user/login",
-                            // loại request
-                            type: "POST",
-                            // Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
-
-                            //Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
-                            //contentType: "application/x-www-form-urlencoded",
-                            //dữ liệu được gửi đến server
-                            data: {
-                                "username": jQuery("#username").val(),
-                                "password": jQuery("#password").val(),
-                            },
-
-                            success: function (data, textStatus, jqXHR) {
-                                if (data.status == 'success') {
-                                    alert("Welcome to MyPets!");
-                                    window.location.href = "index.html";
-                                } else {
-                                    alert("Wrong password or username, please try again");
-                                }
-                            },
-                        
-                            error: function (jqXHR, textStatus, errorThrown) {
-                                console.log("HTTP Request Failed");
-                                alert("HTTP Request Failed");
-                            },
-                            complete: function() {
-                                
-                            };
-                        })
-                    });
-        
-        */
-        
-        
-        
         $("#register-button").on("click", function (e) {
             jQuery.ajax({
                 //url của file
